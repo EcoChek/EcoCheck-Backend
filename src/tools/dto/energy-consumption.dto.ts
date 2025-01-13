@@ -12,7 +12,7 @@ class DeviceDto {
   @IsString()
   name: string;
 
-  @IsIn(['A', 'B', 'C', 'D', 'E', 'F'])
+  @IsIn(['a', 'b', 'c', 'd', 'e', 'f'])
   grade: string;
 
   @Min(0)

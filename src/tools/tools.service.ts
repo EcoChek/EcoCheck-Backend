@@ -46,12 +46,12 @@ export class ToolsService {
   }
 
   gradeMultiplier = {
-    A: 1.0,
-    B: 1.2,
-    C: 1.5,
-    D: 1.8,
-    E: 2.0,
-    F: 2.5
+    a: 1.0,
+    b: 1.2,
+    c: 1.5,
+    d: 1.8,
+    e: 2.0,
+    f: 2.5
   };
 
   getEnergyConsumption(energyConsumptionDto: EnergyConsumptionDto) {
