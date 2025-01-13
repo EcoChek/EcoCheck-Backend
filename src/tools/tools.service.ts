@@ -29,18 +29,19 @@ export class ToolsService {
     });
 
     const resp = await model.generateContent([
-      JSON.stringify(response.data['product']),
-      `Give an estimation of the carbon footprint this object would give in kg of co2.
+      `Give an estimation of the carbon footprint this object would give in kg of co2: ${response.data['product']['product_name']}
         
         Object: {emissions: number}
         Return Object`
     ]);
 
+    console.log(resp.response.text());
+
     return {
       greenScore: response.data['product']['ecoscore_data']['grade'],
       name: response.data['product']['product_name'],
       imageURL: response.data['product']['image_url'] ?? '',
-      emissions: JSON.parse(resp.response.text())['emissions']
+      emissions: +JSON.parse(resp.response.text())['emissions']
     };
   }
 
