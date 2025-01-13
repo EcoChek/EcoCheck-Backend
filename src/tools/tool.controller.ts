@@ -3,6 +3,7 @@ import { ToolsService } from './tools.service';
 import { ImageDto } from './dto/image.dto';
 import { EnergyConsumptionDto } from './dto/energy-consumption.dto';
 import { BarcodeDto } from './dto/barcode.dto';
+import { CarConsumptionDto } from './dto/car-consumption.dto';
 
 @Controller()
 export class ToolController {
@@ -21,5 +22,10 @@ export class ToolController {
   @Post('energy-consumption')
   energyConsumption(@Body() energyConsumptionDto: EnergyConsumptionDto) {
     return this.openFoodFactsService.getEnergyConsumption(energyConsumptionDto);
+  }
+
+  @Post('car-emission')
+  carConsumption(@Body() carConsumptionDto: CarConsumptionDto) {
+    return this.openFoodFactsService.getCarConsumption(carConsumptionDto);
   }
 }

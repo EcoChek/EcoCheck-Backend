@@ -4,6 +4,7 @@ import { firstValueFrom } from 'rxjs';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import envConfig from '../../env.config';
 import { EnergyConsumptionDto } from './dto/energy-consumption.dto';
+import { CarConsumptionDto } from './dto/car-consumption.dto';
 
 @Injectable()
 export class ToolsService {
@@ -22,7 +23,8 @@ export class ToolsService {
 
     return {
       greenScore: response.data['product']['ecoscore_data']['grade'],
-      image: response.data['product']['product_name']
+      name: response.data['product']['product_name'],
+      imageURL: response.data['product']['image_url'] ?? ''
     };
   }
 
@@ -93,5 +95,30 @@ Return: Object`;
     }
 
     return resp;
+  }
+
+  getCarConsumption(carConsumptionDto: CarConsumptionDto) {
+    let emissionsPerKm = 0;
+
+    switch (carConsumptionDto.engine) {
+      case 'diesel':
+        emissionsPerKm = 0.12;
+        break;
+      case 'petrol':
+        emissionsPerKm = 0.14;
+        break;
+      case 'electric':
+        emissionsPerKm = 0;
+        break;
+      case 'hybrid':
+        emissionsPerKm = 0.08;
+        break;
+      default:
+        throw new Error('Invalid engine type');
+    }
+
+    return {
+      emissions: carConsumptionDto.kilometers * emissionsPerKm
+    };
   }
 }
