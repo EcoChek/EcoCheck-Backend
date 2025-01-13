@@ -3,7 +3,7 @@ import { HttpService } from '@nestjs/axios';
 import { firstValueFrom } from 'rxjs';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import envConfig from '../../env.config';
-import { EnergyConsumptionDto } from '../test/dto/energy-consumption.dto';
+import { EnergyConsumptionDto } from './dto/energy-consumption.dto';
 
 @Injectable()
 export class ToolsService {

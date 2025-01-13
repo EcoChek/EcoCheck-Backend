@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { ToolsService } from './tools/tools.service';
 import { HttpModule } from '@nestjs/axios';
-import { TestController } from './test/test.controller';
+import { ToolController } from './tools/tool.controller';
 
 @Module({
   imports: [HttpModule],
-  controllers: [TestController],
+  controllers: [ToolController],
   providers: [ToolsService]
 })
 export class AppModule {}

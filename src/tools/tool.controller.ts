@@ -1,10 +1,10 @@
 import { Body, Controller, Get, Param } from '@nestjs/common';
-import { ToolsService } from '../tools/tools.service';
+import { ToolsService } from './tools.service';
 import { ImageDto } from './dto/image.dto';
 import { EnergyConsumptionDto } from './dto/energy-consumption.dto';
 
-@Controller('test')
-export class TestController {
+@Controller()
+export class ToolController {
   constructor(private readonly openFoodFactsService: ToolsService) {}
 
   @Get('image')
@@ -12,7 +12,7 @@ export class TestController {
     return this.openFoodFactsService.estimateEmissions(body.file);
   }
 
-  @Get(':barcode')
+  @Get('barcode/:barcode')
   test(@Param('barcode') barcode: string) {
     return this.openFoodFactsService.getProductScore(barcode);
   }
