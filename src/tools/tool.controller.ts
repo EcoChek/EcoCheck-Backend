@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ToolsService } from './tools.service';
 import { ImageDto } from './dto/image.dto';
 import { EnergyConsumptionDto } from './dto/energy-consumption.dto';
@@ -7,7 +7,7 @@ import { EnergyConsumptionDto } from './dto/energy-consumption.dto';
 export class ToolController {
   constructor(private readonly openFoodFactsService: ToolsService) {}
 
-  @Get('image')
+  @Post('image')
   image(@Body() body: ImageDto) {
     return this.openFoodFactsService.estimateEmissions(body.file);
   }
@@ -17,7 +17,7 @@ export class ToolController {
     return this.openFoodFactsService.getProductScore(barcode);
   }
 
-  @Get('energy-consumption')
+  @Post('energy-consumption')
   energyConsumption(@Body() energyConsumptionDto: EnergyConsumptionDto) {
     return this.openFoodFactsService.getEnergyConsumption(energyConsumptionDto);
   }
