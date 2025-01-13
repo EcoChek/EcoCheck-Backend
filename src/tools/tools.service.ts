@@ -21,7 +21,8 @@ export class ToolsService {
     );
 
     return {
-      grade: response.data['product']['ecoscore_data']['grade']
+      greenScore: response.data['product']['ecoscore_data']['grade'],
+      image: response.data['product']['product_name']
     };
   }
 

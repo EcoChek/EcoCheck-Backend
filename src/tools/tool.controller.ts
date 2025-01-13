@@ -1,7 +1,8 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { ToolsService } from './tools.service';
 import { ImageDto } from './dto/image.dto';
 import { EnergyConsumptionDto } from './dto/energy-consumption.dto';
+import { BarcodeDto } from './dto/barcode.dto';
 
 @Controller()
 export class ToolController {
@@ -12,9 +13,9 @@ export class ToolController {
     return this.openFoodFactsService.estimateEmissions(body.file);
   }
 
-  @Get('barcode/:barcode')
-  test(@Param('barcode') barcode: string) {
-    return this.openFoodFactsService.getProductScore(barcode);
+  @Post('barcode')
+  test(@Body() barcodeDto: BarcodeDto) {
+    return this.openFoodFactsService.getProductScore(barcodeDto.barcode);
   }
 
   @Post('energy-consumption')
