@@ -41,7 +41,9 @@ export class ToolsService {
       greenScore: response.data['product']['ecoscore_data']['grade'],
       name: response.data['product']['product_name'],
       imageURL: response.data['product']['image_url'] ?? '',
-      emissions: +JSON.parse(resp.response.text())['emissions']
+      emissions: +JSON.parse(resp.response.text())['emissions'],
+      quantity: +response.data['product_quantity'],
+      unit: response.data['product_unit']
     };
   }
 
