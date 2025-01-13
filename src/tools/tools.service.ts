@@ -35,15 +35,13 @@ export class ToolsService {
         Return Object`
     ]);
 
-    console.log(resp.response.text());
-
     return {
       greenScore: response.data['product']['ecoscore_data']['grade'],
       name: response.data['product']['product_name'],
       imageURL: response.data['product']['image_url'] ?? '',
       emissions: +JSON.parse(resp.response.text())['emissions'],
-      quantity: +response.data['product_quantity'],
-      unit: response.data['product_unit']
+      quantity: +response.data['product']['product_quantity'],
+      unit: response.data['product']['product_quantity_unit']
     };
   }
 
