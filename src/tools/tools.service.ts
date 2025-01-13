@@ -22,7 +22,7 @@ export class ToolsService {
     );
 
     return {
-      greenScore: response.data['product']['ecoscore_data']['grade'],
+      greenScore: response.data['product']['ecoscore_data']['grade'] ?? '',
       name: response.data['product']['product_name'],
       imageURL: response.data['product']['image_url'] ?? ''
     };
