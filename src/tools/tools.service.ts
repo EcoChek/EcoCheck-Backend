@@ -21,11 +21,17 @@ export class ToolsService {
       )
     );
 
-    return {
+    const obj = {
       greenScore: response.data['product']['ecoscore_data']['grade'] ?? '',
       name: response.data['product']['product_name'],
       imageURL: response.data['product']['image_url'] ?? ''
     };
+
+    if (!obj['greenScore']) {
+      obj['greenScore'] = '';
+    }
+
+    return obj;
   }
 
   gradeMultiplier = {
