@@ -29,7 +29,7 @@ export class ToolsService {
     });
 
     const resp = await model.generateContent([
-      `Give an estimation of the carbon footprint this object would give in kg of co2: ${response.data['product']['product_name']}
+      `Give an estimation of the carbon footprint this object would give in kg of co2: ${response.data['product']['product_name']}. If you're not sure, put 0 rather than nothing
         
         Object: {emissions: number}
         Return Object`
