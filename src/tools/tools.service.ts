@@ -56,7 +56,10 @@ export class ToolsService {
       totalEnergy += power;
     });
 
-    return totalEnergy;
+    return {
+      totalEnergy,
+      devices
+    };
   }
 
   async estimateEmissions(file: string) {

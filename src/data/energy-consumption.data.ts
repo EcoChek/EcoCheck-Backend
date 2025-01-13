@@ -1,170 +1,98 @@
 const energyConsumptionData = [
   {
-    plug_name: 'Washing machine',
-    power_max: 2663.0
-  },
-  {
-    plug_name: 'Internet router',
-    power_max: 38.0
-  },
-  {
-    plug_name: 'Vacuum',
-    power_max: 44.0
-  },
-  {
-    plug_name: 'Washing machine',
-    power_max: 2688.0
-  },
-  {
-    plug_name: 'Dishwasher',
-    power_max: 1806.0
-  },
-  {
-    plug_name: 'Boiler',
-    power_max: 2664.0
-  },
-  {
-    plug_name: 'Air purifier',
-    power_max: 22.0
-  },
-  {
-    plug_name: 'Sound system',
-    power_max: 17.0
-  },
-  {
-    plug_name: '3d printer',
+    plug_name: '3DPrinter',
     power_max: 154.0
   },
   {
-    plug_name: 'Coffee',
-    power_max: 1481.0
-  },
-  {
-    plug_name: 'Phone charger',
-    power_max: 86.0
-  },
-  {
-    plug_name: 'Fridge',
-    power_max: 1436.0
-  },
-  {
-    plug_name: 'Radiator',
-    power_max: 1348.0
-  },
-  {
-    plug_name: 'Dehumidifier',
-    power_max: 1989.0
-  },
-  {
-    plug_name: 'Fridge',
-    power_max: 1001.0
-  },
-  {
-    plug_name: 'Micro wave oven',
-    power_max: 1712.0
-  },
-  {
-    plug_name: 'Laptop',
-    power_max: 61.0
-  },
-  {
-    plug_name: 'Tv',
-    power_max: 54.0
-  },
-  {
-    plug_name: 'Vacuum',
-    power_max: 1099.0
-  },
-  {
-    plug_name: 'Screen',
-    power_max: 33.0
-  },
-  {
-    plug_name: 'Dehumidifier',
-    power_max: 55.0
-  },
-  {
-    plug_name: 'Solar panel',
-    power_max: 417.0
-  },
-  {
-    plug_name: 'Screen',
-    power_max: 30.0
-  },
-  {
-    plug_name: 'Washing machine',
-    power_max: 2584.0
-  },
-  {
-    plug_name: 'Fan',
-    power_max: 83.0
-  },
-  {
-    plug_name: 'Air conditioner',
+    plug_name: 'airConditioner',
     power_max: 45.0
   },
   {
-    plug_name: 'Laptop',
-    power_max: 55.0
+    plug_name: 'airPurifier',
+    power_max: 22.0
   },
   {
-    plug_name: 'Coffee',
-    power_max: 1373.0
+    plug_name: 'boiler',
+    power_max: 2605.5
   },
   {
-    plug_name: 'Washing machine',
-    power_max: 2171.0
+    plug_name: 'coffee',
+    power_max: 1417.6666666667
   },
   {
-    plug_name: 'Computer',
+    plug_name: 'computer',
     power_max: 280.0
   },
   {
-    plug_name: 'Boiler',
-    power_max: 2607.5
+    plug_name: 'dehumidifier',
+    power_max: 1022.0
   },
   {
-    plug_name: 'Micro wave oven',
-    power_max: 1802.0
+    plug_name: 'dishwasher',
+    power_max: 1806.0
   },
   {
-    plug_name: 'Printer',
-    power_max: 32.0
-  },
-  {
-    plug_name: 'Fridge',
-    power_max: 280.0
-  },
-  {
-    plug_name: 'Coffee',
-    power_max: 1399.0
-  },
-  {
-    plug_name: 'Fridge',
-    power_max: 742.0
-  },
-  {
-    plug_name: 'Washing machine',
-    power_max: 1955.0
-  },
-  {
-    plug_name: 'Internet router',
-    power_max: 16.0
-  },
-  {
-    plug_name: 'Dryer',
+    plug_name: 'dryer',
     power_max: 3267.0
   },
   {
-    plug_name: 'Boiler',
-    power_max: 2545.0
+    plug_name: 'fan',
+    power_max: 83.0
   },
   {
-    plug_name: 'Washing machine',
-    power_max: 2523.0
-  },
-  {
-    plug_name: 'Freezer',
+    plug_name: 'freezer',
     power_max: 1623.0
+  },
+  {
+    plug_name: 'fridge',
+    power_max: 864.75
+  },
+  {
+    plug_name: 'internetRouter',
+    power_max: 27.0
+  },
+  {
+    plug_name: 'laptop',
+    power_max: 58.0
+  },
+  {
+    plug_name: 'microWaveOven',
+    power_max: 1757.0
+  },
+  {
+    plug_name: 'phoneCharger',
+    power_max: 86.0
+  },
+  {
+    plug_name: 'printer',
+    power_max: 32.0
+  },
+  {
+    plug_name: 'radiator',
+    power_max: 1348.0
+  },
+  {
+    plug_name: 'screen',
+    power_max: 31.5
+  },
+  {
+    plug_name: 'solarPanel',
+    power_max: 417.0
+  },
+  {
+    plug_name: 'soundSystem',
+    power_max: 17.0
+  },
+  {
+    plug_name: 'tv',
+    power_max: 54.0
+  },
+  {
+    plug_name: 'vacuum',
+    power_max: 571.5
+  },
+  {
+    plug_name: 'washingMachine',
+    power_max: 2430.6666666667
   }
 ];
