@@ -21,10 +21,5 @@ class DeviceDto {
 }
 
 export class EnergyConsumptionDto {
-  @IsArray({
-    each: true
-  })
-  @Type(() => DeviceDto)
-  @ValidateNested()
-  devices: DeviceDto[];
+  devices: any;
 }
