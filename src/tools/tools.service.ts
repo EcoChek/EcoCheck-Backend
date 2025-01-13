@@ -5,6 +5,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import envConfig from '../../env.config';
 import { EnergyConsumptionDto } from './dto/energy-consumption.dto';
 import { CarConsumptionDto } from './dto/car-consumption.dto';
+import { energyConsumptionData } from '../data/energy-consumption.data';
 
 @Injectable()
 export class ToolsService {

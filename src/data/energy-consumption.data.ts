@@ -1,4 +1,4 @@
-const energyConsumptionData = [
+export const energyConsumptionData = [
   {
     plug_name: '3DPrinter',
     power_max: 154.0
